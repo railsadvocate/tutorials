@@ -1,0 +1,14 @@
+<h2 class='page-header'>Edit Post</h2>
+<%= form_for @post do |f| %>
+  <div class="form-group">
+    <%= f.label :title %><br />
+    <%= f.text_field :title, autofocus: true, placeholder: 'Enter a title', value: @post.title %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, cols: 50, rows: 10, placeholder: 'Enter the content for your post', value: @post.description %>
+  </div>
+  <div class="form-group">
+    <%= f.submit %>
+  </div>
+<% end %>

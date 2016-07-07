@@ -1,0 +1,8 @@
+<h2 class='page-header'>Posts <small><%= link_to 'edit post', edit_post_path(@post) %></small></h2>
+
+<% if @post.nil? %>
+  <%= "This post has been deleted" %>
+<% else %>
+    <%= @post.title %><br />
+    <%= @post.description %><br /><br />
+<% end %>

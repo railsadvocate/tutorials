@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlogApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <% if !flash.empty? %>
+      <%= flash.notice.html_safe %>
+    <% end %>
+    <%= yield %>
+  </div>
+</body>
+</html>

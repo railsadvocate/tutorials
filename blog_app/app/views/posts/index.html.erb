@@ -1,0 +1,12 @@
+<h2 class='page-header'>Posts <small><%= link_to 'create post', new_post_path %></small></h2>
+
+<% if @posts.empty? %>
+  <%= "There are no posts to show" %>
+<% else %>
+  <% @posts.each do |p| %>
+    <%= p.title %><br />
+    <%= p.description %><br />
+    <%= link_to 'View post', post_path(p) %><br />
+    <%= link_to 'Delete post', p, method: :delete %><br /><br />
+  <% end %>
+<% end %>
